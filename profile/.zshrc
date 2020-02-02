@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/root/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="maran"
+ZSH_THEME="beeman"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -97,3 +97,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Personal stuff
+source ~/.secrets
+
+export GIT_AUTHOR_NAME="Bram Borggreve"
+export GIT_AUTHOR_EMAIL="borggreve@gmail.com"
+
+# Upstream sync shortcuts
+alias us-master="git checkout master; git fetch upstream && git reset --hard upstream/master && git push; git checkout -"
+alias us-develop="git checkout develop; git fetch upstream && git reset --hard upstream/develop && git push; git checkout -"
+
+export PATH="$HOME/bin:$HOME/.yarn/bin:$PATH"
