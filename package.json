@@ -1,0 +1,22 @@
+{
+  "name": "@beeman/server-shell",
+  "version": "1.0.0",
+  "description": "Some scripts to quickly setup a nice shell environment for my servers and containers",
+  "main": "index.js",
+  "scripts": {
+    "docker:build": "docker build . -t beeman/server-shell:latest",
+    "docker:push": "docker push beeman/server-shell:latest",
+    "docker:run": "docker run -p 4567:4567 -it beeman/server-shell:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beeman/server-shell.git"
+  },
+  "keywords": [],
+  "author": "Bram Borggreve @beeman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beeman/server-shell/issues"
+  },
+  "homepage": "https://github.com/beeman/server-shell#readme"
+}
