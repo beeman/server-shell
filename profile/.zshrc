@@ -99,9 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Personal customizations
-if [ -f "~/.env" ]
+if [ -f "$HOME/.env" ]
 then
-    source "~/.env"
+    source "$HOME/.env"
 fi
 
 # Upstream sync shortcuts
