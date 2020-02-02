@@ -98,8 +98,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Personal stuff
-source ~/.secrets
+# Personal customizations
+if [ -f "~/.env" ]
+then
+    source "~/.env"
+fi
 
 export GIT_AUTHOR_NAME="Bram Borggreve"
 export GIT_AUTHOR_EMAIL="borggreve@gmail.com"
