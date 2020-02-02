@@ -104,9 +104,6 @@ then
     source "~/.env"
 fi
 
-export GIT_AUTHOR_NAME="Bram Borggreve"
-export GIT_AUTHOR_EMAIL="borggreve@gmail.com"
-
 # Upstream sync shortcuts
 alias us-master="git checkout master; git fetch upstream && git reset --hard upstream/master && git push; git checkout -"
 alias us-develop="git checkout develop; git fetch upstream && git reset --hard upstream/develop && git push; git checkout -"
