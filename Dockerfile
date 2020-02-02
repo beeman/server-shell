@@ -10,6 +10,4 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/beeman/server-shell/master/tools/
 
 RUN usermod -s /bin/zsh root
 
-ENTRYPOINT ["/bin/sh", "-c"]
-
-CMD zsh
+ENTRYPOINT ["/bin/zsh"]
