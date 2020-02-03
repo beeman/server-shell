@@ -7,7 +7,7 @@ local user_host="[${user_status}@${host_status}]"
 local current_dir="%{$fg[green]%}%c%{$reset_color%}"
 
 local prompt="%(!.#.$)"
-local prompt_status="%(?:${prompt}:%{$fg_bold[red]%}${prompt})"
+local prompt_status="%(?:${prompt}:%{$fg_bold[red]%}${prompt})%{$reset_color%}"
 
 PROMPT='${user_host} ${current_dir} $(git_prompt_info)${prompt_status} '
 
