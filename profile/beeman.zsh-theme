@@ -9,7 +9,14 @@ local current_dir="%{$fg[green]%}%c%{$reset_color%}"
 local prompt="%(!.#.$)"
 local prompt_status="%(?:${prompt}:%{$fg_bold[red]%}${prompt})%{$reset_color%}"
 
-PROMPT='${user_host} ${current_dir} $(git_prompt_info)${prompt_status} '
+function docker_machine() {
+  if [[ -n $DOCKER_MACHINE_NAME ]]
+  then
+    echo "🐳 %{$fg[blue]%}[${DOCKER_MACHINE_NAME}]%{$reset_color%} "
+  fi
+}
+
+PROMPT='${user_host} ${current_dir} $(git_prompt_info)$(docker_machine)${prompt_status} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
