@@ -110,3 +110,6 @@ alias us-master="git checkout master; git fetch upstream && git reset --hard ups
 alias us-develop="git checkout develop; git fetch upstream && git reset --hard upstream/develop && git push; git checkout -"
 
 export PATH="$HOME/bin:$HOME/.yarn/bin:$PATH"
+
+setopt inc_append_history
+setopt share_history
