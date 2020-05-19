@@ -113,3 +113,15 @@ export PATH="$HOME/bin:$HOME/.yarn/bin:$PATH"
 
 setopt inc_append_history
 setopt share_history
+
+# Instructor mode to disable distractions.
+function instructor() {
+  export PS1="\\$ "
+  _zsh_autosuggest_disable
+  clear
+}
+
+# We can force this mode by setting the INSTRUCTOR env var
+if [ -n "${INSTRUCTOR+1}" ]; then
+  instructor
+fi
