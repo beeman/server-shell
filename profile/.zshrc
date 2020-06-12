@@ -106,6 +106,7 @@ then
 fi
 
 # Upstream sync shortcuts
+alias us-main="git checkout main; git fetch upstream && git reset --hard upstream/main && git push; git checkout -"
 alias us-master="git checkout master; git fetch upstream && git reset --hard upstream/master && git push; git checkout -"
 alias us-develop="git checkout develop; git fetch upstream && git reset --hard upstream/develop && git push; git checkout -"
 
@@ -125,3 +126,10 @@ function instructor() {
 if [ -n "${INSTRUCTOR+1}" ]; then
   instructor
 fi
+
+# Rename git branch master to main
+function rename-master() {
+  git branch -m master main
+  git push origin HEAD
+  git branch -u origin/main
+}
